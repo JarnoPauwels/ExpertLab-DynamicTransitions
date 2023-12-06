@@ -1,0 +1,48 @@
+.home-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    margin: 0;
+  }
+
+.title-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* width: 100vw; */
+}
+
+.home-title-container{
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+}
+  
+.home-title {
+    font-weight: normal;
+}
+
+.home-typewriter-title {
+    padding-left: 0.3em;
+}
+
+.home-image-container {
+    width: 800px; /* Set a fixed width */
+    height: 800px; /* Set a fixed height */
+    overflow: hidden; /* Hide any overflow if the image is larger than the container */
+  }
+
+.home-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sports-sections {
+  display: flex;
+  flex-direction: column;
+}

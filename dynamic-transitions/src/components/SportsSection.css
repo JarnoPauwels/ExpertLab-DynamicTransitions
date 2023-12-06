@@ -1,0 +1,11 @@
+.sport-section {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* Add any additional styles you need for the sports section */
+}

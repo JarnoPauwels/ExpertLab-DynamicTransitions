@@ -1,0 +1,12 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    margin: 2em;
+    z-index: 10;
+}
+
+.page-title {
+    padding-left: 2em;
+}
