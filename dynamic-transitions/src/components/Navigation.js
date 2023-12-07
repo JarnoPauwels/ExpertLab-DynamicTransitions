@@ -1,7 +1,9 @@
 // Navigation.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavigationStyles.css'; // Import the CSS file
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faBasketballBall, faFutbol, faFootball, faBaseball } from '@fortawesome/free-solid-svg-icons';
+import './NavigationStyles.css';
 import styled from 'styled-components';
 
 const Nav = styled.nav``;
@@ -14,13 +16,29 @@ const Navigation = () => {
     <Nav>
       <Ul>
         <Li>
-          <LinkStyled to="/">Home</LinkStyled>
+          <LinkStyled to="/" className="home">
+            <FontAwesomeIcon icon={faHome} />
+          </LinkStyled>
         </Li>
         <Li>
-          <LinkStyled to="/page1">Page 1</LinkStyled>
+          <LinkStyled to="/the-history-of-basketball" className="basketball">
+            <FontAwesomeIcon icon={faBasketballBall} />
+          </LinkStyled>
         </Li>
         <Li>
-          <LinkStyled to="/page2">Page 2</LinkStyled>
+          <LinkStyled to="/the-history-of-football" className="football">
+            <FontAwesomeIcon icon={faFutbol} />
+          </LinkStyled>
+        </Li>
+        <Li>
+          <LinkStyled to="/the-history-of-american-football" className="american-football">
+            <FontAwesomeIcon icon={faFootball} />
+          </LinkStyled>
+        </Li>
+        <Li>
+          <LinkStyled to="/the-history-of-tennis" className="tennis">
+            <FontAwesomeIcon icon={faBaseball} />
+          </LinkStyled>
         </Li>
       </Ul>
     </Nav>

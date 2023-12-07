@@ -1,18 +1,19 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { gsap } from 'gsap';
-// import Navigation from './Navigation';
+import Navigation from './Navigation';
 import Typewriter from 'typewriter-effect';
 import './Home.css'
 import SportsSection from './SportsSection'; 
+import HoverButton from './HoverButton';
+import { Reveal } from './Reveal';
 
 import image1 from './images/footballplayer.png';
 import image2 from './images/basketball.png';
 import image3 from './images/amfootball.png';
+import image4 from './images/tennisplayer.png';
 
 const Home = () => {
-  const images = useMemo(() => [image1, image2, image3], []);
-
-
+  const images = useMemo(() => [image1, image2, image3, image4], []);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [initialFadeIn, setInitialFadeIn] = useState(false);
 
@@ -32,7 +33,7 @@ const Home = () => {
       // GSAP timeline for image transitions
       gsap.timeline()
         // Fade out the current image
-        .to('.home-image', { opacity: 0, duration: 1 })
+        .to('.home-image', { opacity: 0, duration: 0.5 })
         // Change the image source
         .call(() => {
           const nextImageIndex = (currentImageIndex + 1) % images.length;
@@ -40,7 +41,7 @@ const Home = () => {
           setCurrentImageIndex(nextImageIndex);
         })
         // Fade in the new image
-        .to('.home-image', { opacity: 1, duration: 1 });
+        .to('.home-image', { opacity: 1, duration: 0.5 });
     }, 5000);
 
     // Clear the timer when the component unmounts
@@ -49,7 +50,7 @@ const Home = () => {
 
   return (
     <div className='home-body'>
-      {/* <Navigation/> */}    
+      <Navigation/>    
       <div className='title-page'>        
         <div className='home-title-container'>
           <h1 className='home-title'>The History Of </h1>
@@ -70,12 +71,48 @@ const Home = () => {
       </div>  
 
       <div className='sports-sections'>
-        <SportsSection backgroundImage='url("/path-to-background-image1.jpg")'>
-
+        {/* Basketball */}
+        <SportsSection classname="basketball-section">
+          <Reveal classname="section-reveal">
+            <div className='basketball-title-container'>
+              <h1 className='basketball-title'>The History Of Basketball</h1>
+              <HoverButton to="/the-history-of-basketball">Learn More</HoverButton> 
+            </div>
+            <img src={image2} alt='basketball player' className='basketball-img' />
+          </Reveal>
         </SportsSection>
 
-        <SportsSection backgroundImage='url("/path-to-background-image2.jpg")'>
+        {/* Football */}
+        <SportsSection classname="football-section">
+          <Reveal classname="section-reveal">
+            <img src={image1} alt='football player' className='football-img' />
+            <div className='football-title-container'>
+              <h1 className='football-title'>The History Of Football</h1>
+              <HoverButton to="/the-history-of-football">Learn More</HoverButton> 
+            </div>
+          </Reveal>
+        </SportsSection>
 
+        {/* American Football */}
+        <SportsSection classname="american-football-section">
+          <Reveal classname="section-reveal">
+            <div className='american-football-title-container'>
+              <h1 className='american-football-title'>The History Of American Football</h1>
+              <HoverButton to="/the-history-of-american-football">Learn More</HoverButton> 
+            </div>
+            <img src={image3} alt='american-football player' className='american-football-img' />
+          </Reveal>
+        </SportsSection>
+
+        {/* Tennis */}
+        <SportsSection classname="tennis-section">
+          <Reveal classname="section-reveal">
+            <img src={image4} alt='tennis player' className='tennis-img' />
+            <div className='tennis-title-container'>
+              <h1 className='tennis-title'>The History Of Tennis</h1>
+              <HoverButton to="/the-history-of-tennis">Learn More</HoverButton> 
+            </div>
+          </Reveal>
         </SportsSection>
 
       </div>

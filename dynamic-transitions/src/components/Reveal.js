@@ -1,7 +1,7 @@
 import { useEffect, useRef} from "react";
 import {motion, useInView, useAnimation} from "framer-motion";
 
-export const Reveal = ({ children, width = "100%"}) => {
+export const Reveal = ({ children, width = "100%", classname}) => {
 
     const ref = useRef(null);
     const isInView = useInView(ref, {once: true})
@@ -27,7 +27,8 @@ export const Reveal = ({ children, width = "100%"}) => {
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.5}}
+            transition={{ duration: 0.8, delay: 0.5}}
+            className={classname}
             >{children}</motion.div>
         </div>
     )

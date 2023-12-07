@@ -1,4 +1,4 @@
-.sport-section {
+.basketball-section, .football-section, .american-football-section, .tennis-section{
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -6,6 +6,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section-reveal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basketball-section {
+  background-image: url(./images/basketballcourt.png);
+}
+
+.football-section {
+  background-image: url(./images/footballfield.jpg);
+}
+
+.american-football-section {
+  background-image: url(./images/amfootballfield.jpg);
+}
+
+.tennis-section {
+  background-image: url(./images/tennisfield.jpg);
+}
+
+.basketball-title, .football-title, .american-football-title, .tennis-title {
+  margin-bottom: 20px;
   color: white;
-  /* Add any additional styles you need for the sports section */
+  font-size: 80px;
+  width: 30vw;
+  /* offset-x | offset-y | blur-radius | color */
+  text-shadow: 8px 8px 2px black; 
+}
+
+.american-football-title{
+  width: 40vw;
+}
+
+.tennis-title{
+  width: 25vw;
+}
+
+.football-img, .american-football-img {
+  width: 512px;
+  /* height: 512px; */
+}
+
+.tennis-img{
+  width: 650px;
+}
+
+.football-title-container, .tennis-title-container {
+  text-align: right;
 }

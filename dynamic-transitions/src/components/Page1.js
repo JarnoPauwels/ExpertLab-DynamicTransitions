@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Typewriter from 'typewriter-effect';
-import './Page1.css'
+// import './Page1.css'
 
 const Page1 = () => {
   return (

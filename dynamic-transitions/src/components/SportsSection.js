@@ -2,9 +2,9 @@
 import React from 'react';
 import './SportsSection.css'; // Import your CSS file for sports sections
 
-const SportsSection = ({ backgroundImage, children }) => {
+const SportsSection = ({ index , children, classname }) => {
   return (
-    <div className="sport-section" style={{ backgroundImage }}>
+    <div id={`section-${index}`} className={classname} >
       {children}
     </div>
   );

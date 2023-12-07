@@ -31,15 +31,15 @@
 }
 
 .home-image-container {
-    width: 800px; /* Set a fixed width */
-    height: 800px; /* Set a fixed height */
-    overflow: hidden; /* Hide any overflow if the image is larger than the container */
+    width: 800px; 
+    /* height: 800px;  */
+    /* overflow: hidden;  */
   }
 
 .home-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .sports-sections {

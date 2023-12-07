@@ -1,0 +1,12 @@
+.page1-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+.page1-title {
+    text-align: center;
+    /* font-size: 300px; */
+  }
