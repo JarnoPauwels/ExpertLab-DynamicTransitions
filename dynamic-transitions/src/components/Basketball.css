@@ -1,12 +1,74 @@
 .page1-body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0;
   }
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #ff0055;;
+  transform-origin: 0%;
+}
+
   
 .page1-title {
     text-align: center;
-    /* font-size: 300px; */
   }
+
+.invention-section, .basketball-section {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.invention-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw; 
+}
+
+.invention-text-container, .first-game-text-container {
+  margin-right: 200px;
+  width: 50%; 
+}
+
+.invention-img-container, .first-game-img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invention-img {
+  width: 300px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.387); 
+}
+
+.basketballcoll-img, .nba-img {
+  width: 600px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.387); 
+
+}
+
+.inventor-text {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px; 
+}
+
+.first-game-text-container{
+  margin-right: 0;
+  margin-left: 200px;
+}
