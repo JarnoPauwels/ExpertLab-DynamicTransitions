@@ -50,14 +50,13 @@ const Home = () => {
 
   return (
     <div className='home-body'>
-      <Navigation/>    
       <div className='title-page'>        
         <div className='home-title-container'>
           <h1 className='home-title'>The History Of </h1>
           <h1 className='home-typewriter-title'>
             <Typewriter
               options={{
-                strings: ['Sports', 'Football', 'Basketball'],
+                strings: ['Basketball', 'Football', 'American Football', 'Tennis'],
                 autoStart: true,
                 loop: true,
               }}
@@ -73,6 +72,7 @@ const Home = () => {
       <div className='sports-sections'>
         {/* Basketball */}
         <SportsSection classname="basketball-section">
+          <Navigation/>    
           <Reveal classname="section-reveal">
             <div className='basketball-title-container'>
               <h1 className='basketball-title'>The History Of Basketball</h1>
