@@ -1,9 +1,10 @@
+// Home.js
 import React, { useEffect, useState, useMemo } from 'react';
 import { gsap } from 'gsap';
 import Navigation from './Navigation';
 import Typewriter from 'typewriter-effect';
-import './Home.css'
-import SportsSection from './SportsSection'; 
+import './Home.css';
+import SportsSection from './SportsSection';
 import HoverButton from './HoverButton';
 import { Reveal } from './Reveal';
 
@@ -50,7 +51,8 @@ const Home = () => {
 
   return (
     <div className='home-body'>
-      <div className='title-page'>        
+      <Navigation/>
+      <div className='title-page'>
         <div className='home-title-container'>
           <h1 className='home-title'>The History Of </h1>
           <h1 className='home-typewriter-title'>
@@ -65,60 +67,56 @@ const Home = () => {
         </div>
 
         <div className='home-image-container'>
-            <img src={images[currentImageIndex]} alt='Sports' className='home-image' />
+          <img src={images[currentImageIndex]} alt='Sports' className='home-image' />
         </div>
-      </div>  
+      </div>
 
       <div className='sports-sections'>
         {/* Basketball */}
-        <SportsSection classname="basketball-section">
-          <Navigation/>    
+        <SportsSection id="basketball-section" classname="basketball-section">
           <Reveal classname="section-reveal">
             <div className='basketball-title-container'>
               <h1 className='basketball-title'>The History Of Basketball</h1>
-              <HoverButton to="/the-history-of-basketball">Learn More</HoverButton> 
+              <HoverButton to="/the-history-of-basketball">Learn More</HoverButton>
             </div>
             <img src={image2} alt='basketball player' className='basketball-img' />
           </Reveal>
         </SportsSection>
 
         {/* Football */}
-        <SportsSection classname="football-section">
+        <SportsSection id="football-section" classname="football-section">
           <Reveal classname="section-reveal">
             <img src={image1} alt='football player' className='football-img' />
             <div className='football-title-container'>
               <h1 className='football-title'>The History Of Football</h1>
-              <HoverButton to="/the-history-of-football">Learn More</HoverButton> 
+              <HoverButton to="/the-history-of-football">Learn More</HoverButton>
             </div>
           </Reveal>
         </SportsSection>
 
         {/* American Football */}
-        <SportsSection classname="american-football-section">
+        <SportsSection id="american-football-section" classname="american-football-section">
           <Reveal classname="section-reveal">
             <div className='american-football-title-container'>
               <h1 className='american-football-title'>The History Of American Football</h1>
-              <HoverButton to="/the-history-of-american-football">Learn More</HoverButton> 
+              <HoverButton to="/the-history-of-american-football">Learn More</HoverButton>
             </div>
             <img src={image3} alt='american-football player' className='american-football-img' />
           </Reveal>
         </SportsSection>
 
         {/* Tennis */}
-        <SportsSection classname="tennis-section">
+        <SportsSection id="tennis-section" classname="tennis-section">
           <Reveal classname="section-reveal">
             <img src={image4} alt='tennis player' className='tennis-img' />
             <div className='tennis-title-container'>
               <h1 className='tennis-title'>The History Of Tennis</h1>
-              <HoverButton to="/the-history-of-tennis">Learn More</HoverButton> 
+              <HoverButton to="/the-history-of-tennis">Learn More</HoverButton>
             </div>
           </Reveal>
         </SportsSection>
-
       </div>
     </div>
-
-  
   );
 };
 
