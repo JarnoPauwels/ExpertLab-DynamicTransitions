@@ -1,25 +1,77 @@
 import React from 'react';
 import Navigation from './Navigation';
 import SportsSection from './SportsSection'; 
-import './Basketball.css'
+import './SportsPages.css'
 import { Reveal } from './Reveal';
 import { motion, useScroll } from "framer-motion";
+
+import Box from '@mui/material/Box';
+import Masonry from '@mui/lab/Masonry';
 
 import image2 from './images/basketball.png';
 import inventor from './images/basketball_inventor.jpg';
 import firstgame from './images/Firstbasketballgame.jpg';
 import college from './images/basketballcollege.jpg';
 import nba from './images/nbalogo.jpg';
+import bs1 from './images/Basketball/photobasketball1.jpg';
+import bs2 from './images/Basketball/photobasketball2.jpg';
+import bs3 from './images/Basketball/photobasketball3.jpg';
+import bs4 from './images/Basketball/photobasketball4.jpg';
+import bs5 from './images/Basketball/photobasketball5.jpg';
 
 const Basketball = () => {
   const { scrollYProgress } = useScroll();
+
+const itemData = [
+  {
+    img: inventor,
+    title: 'Fern',
+  },
+  {
+    img: firstgame,
+    title: 'Mushrooms',
+  },
+  {
+    img: college,
+    title: 'Tower',
+  },
+  {
+    img: nba,
+    title: 'Sea star',
+  },
+  {
+    img: image2,
+    title: 'Snacks',
+  },
+  {
+    img: bs1,
+    title: 'Honey',
+  },
+  {
+    img: bs2,
+    title: 'Basketball',
+  },
+  {
+    img: bs3,
+    title: 'Breakfast',
+  },
+  {
+    img: bs4,
+    title: 'Tree',
+  },
+  {
+    img: bs5,
+    title: 'Burger',
+  },
+  
+];
 
   return (
     <div className='page1-body'>
       <Navigation/>
 
       <motion.div
-        className="progress-bar"
+        className="progress-bar-basketball"
         style={{ scaleX: scrollYProgress }}
       />
 
@@ -105,6 +157,32 @@ const Basketball = () => {
           </div>
         </Reveal>
       </SportsSection>
+      
+      <Box sx={{ width: 1600, minHeight: 829 }}>
+        <h1 className='invention-title'>Photos</h1>
+        <Masonry columns={3} spacing={2}>
+          {itemData.map((item, index) => (
+            <div key={index}>
+            <Reveal>          
+              <img
+                srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+                src={`${item.img}?w=162&auto=format`}
+                alt={item.title}
+                loading="lazy"
+                style={{
+                  borderBottomLeftRadius: 4,
+                  borderBottomRightRadius: 4,
+                  display: 'block',
+                  width: '100%',
+                }}
+              />
+          </Reveal>
+            </div>
+          ))}
+        </Masonry>
+      </Box>
+
+      <a className="source-link" href="https://en.wikipedia.org/wiki/History_of_basketball">https://en.wikipedia.org/wiki/History_of_basketball</a>
 
     </div>
   );
