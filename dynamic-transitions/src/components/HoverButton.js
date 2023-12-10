@@ -1,11 +1,17 @@
 // HoverButton.js
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const HoverButton = ({ to, children }) => {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (to) => {
+    navigate(to);
+    window.scrollTo(0, 0); 
+  };
   return (
-    <Link to={to} style={{ textDecoration: 'none' }}>
+    <Link to={to} onClick={() => handleLinkClick(to)} style={{ textDecoration: 'none' }}>
       <motion.button
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
