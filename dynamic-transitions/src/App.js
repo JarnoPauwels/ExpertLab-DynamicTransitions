@@ -2,9 +2,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-// import Page1 from './components/Page1';
-import Page2 from './components/Page2';
 import Basketball from './components/Basketball';
+import Tennis from './components/Tennis';
+import Football from './components/Football';
+import AmericanFootball from './components/AmericanFootball';
 
 const App = () => {
   return (
@@ -12,7 +13,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/the-history-of-basketball" element={<Basketball />} />
-        <Route path="/the-history-of-football" element={<Page2 />} />
+        <Route path="/the-history-of-football" element={<Football />} />
+        <Route path="/the-history-of-american-football" element={<AmericanFootball />} />
+        <Route path="/the-history-of-tennis" element={<Tennis />} />
       </Routes>
     </Router>
   );
